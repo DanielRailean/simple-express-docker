@@ -23,6 +23,10 @@ app.get('/toggle', function (req, res) {
   res.send(true)
 });
 
+app.get('/env', function(req,res) {
+  res.send(process.env)
+})
+
 app.get('/health', function (req, res) {
   if(on) 
   {
