@@ -9,7 +9,7 @@ const PORT = 8080;
 const app = express();
 
 app.use((req, res, next) => {
-  console.log('Time:', Date.now().toISOString())
+  console.log('Time:', new Date.now().toISOString())
   next()
 })
 
