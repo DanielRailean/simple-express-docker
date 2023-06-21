@@ -14,7 +14,7 @@ RUN curl -f http://example.com
 
 # Bundle app source
 COPY . /usr/src/app
-HEALTHCHECK --interval=3s --timeout=1s --retries=3 --start-period=5s CMD curl -f http://localhost:8080/health || kill $(pidof node)
+HEALTHCHECK --interval=3s --timeout=1s --retries=3 --start-period=5s CMD curl -f http://localhost:8081/health || kill $(pidof node)
 
 EXPOSE 8081
 CMD [ "yarn", "start" ]
