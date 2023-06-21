@@ -7,6 +7,12 @@ const PORT = 8080;
 
 // App
 const app = express();
+
+app.use((req, res, next) => {
+  console.log('Time:', Date.now())
+  next()
+})
+
 let on = true;
 app.get('/', function (req, res) {
   res.send('Hello world\n');
