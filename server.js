@@ -7,7 +7,7 @@ const PORT = 8080;
 
 // App
 const app = express();
-
+app.use(express.json());
 app.use((req, res, next) => {
   console.log('Time:', new Date().toISOString())
   next()
